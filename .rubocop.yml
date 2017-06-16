@@ -1,5 +1,13 @@
 AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
   TargetRubyVersion: 2.4
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
@@ -7,3 +15,11 @@ Style/StringLiterals:
 
 Metrics/LineLength:
   Max: 90
+
+Style/Documentation:
+  Enabled: false
+
+Style/FileName:
+  Description: Use snake_case for source file names.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-files
+  Enabled: false

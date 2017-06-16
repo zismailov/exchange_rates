@@ -7,10 +7,10 @@ RSpec.configure do |config|
 
   config.around do |example|
     DatabaseCleaner.strategy = if example.metadata[:type] == :feature
-                              :truncation
-                            else
-                              :transaction
-                            end
+                                 :truncation
+                               else
+                                 :transaction
+                               end
 
     DatabaseCleaner.cleaning do
       example.run
